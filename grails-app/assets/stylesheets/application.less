@@ -6,15 +6,6 @@
 
 /* Globals */
 
-/* Links */
-
-a,
-a:focus,
-a:hover {
-    color: #fff;
-}
-/* Custom default button */
-
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
@@ -24,6 +15,15 @@ a:hover {
     background-color: #fff;
     border: 1px solid #fff;
 }
+
+/* Links */
+
+a,
+a:focus,
+a:hover {
+    color: #fff;
+}
+
 /* Base structure */
 
 html,
@@ -120,12 +120,26 @@ body {
 
 .cover {
     padding: 0 20px;
+    .btn-lg {
+        padding: 10px 20px;
+        font-weight: bold;
+    }
+    .cover-heading {
+        font-size: 30px;
+    }
+    .form-control-trans {
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        height: 60px;
+        line-height: 60px;
+        width: 200px;
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
-.cover .btn-lg {
-    padding: 10px 20px;
-    font-weight: bold;
-}
 
 /* Footer */
 

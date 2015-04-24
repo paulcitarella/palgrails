@@ -26,9 +26,10 @@
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
             <div class="cover-container">
+                %{-- 
                 <div class="masthead clearfix">
                     <div class="inner">
-                        <h3 class="masthead-brand">Cover</h3>
+                        <h3 class="masthead-brand">Hashtag Palindrome Calculator</h3>
                         <nav>
                             <ul class="nav masthead-nav">
                                 <li class="active"><a href="#">Home</a></li>
@@ -38,12 +39,13 @@
                         </nav>
                     </div>
                 </div>
+                 --}%
                 <div class="inner cover">
                     <g:layoutBody/>
                 </div>
                 <div class="mastfoot">
                     <div class="inner">
-                        <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+                        <p>&copy; 2015 Paul Citarella.</p>
                     </div>
                 </div>
             </div>
