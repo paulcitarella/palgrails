@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<g:if test="${pageProperty(name:'body.ng-app').length() > 0}">
+    <html lang="en" ng-app="${raw(pageProperty(name:'body.ng-app'))}">
+</g:if>
+<g:else>
+    <html lang="en">
+</g:else>
 
 <head>
     <meta charset="utf-8">

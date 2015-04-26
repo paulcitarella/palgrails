@@ -4,12 +4,15 @@
 <head>
     <meta name="layout" content="main"/>
     <title>Hashtag Palindrome Calculator</title>
+    <asset:javascript src="ng-pal.js" />
 </head>
 
-<body>
-    <form class="form-inline">
-        <div class="cover-heading">@<input type="text" class="form-control-trans" value="JoeSmith" /><a href="#" class="btn btn-lg btn-default">Go!</a></div>
-    </form>
+<body ng-app="pal">
+    <div ng-controller="PalController">
+        <form class="form-inline" ng-submit="calc()">
+            <div class="cover-heading">@<input type="text" class="form-control-trans" value="JoeSmith" /><button type="submit" class="btn btn-lg btn-default">Go!</button></div>
+        </form>
+    </div>
 </body>
 
 </html>
