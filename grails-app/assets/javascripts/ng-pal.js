@@ -1,6 +1,6 @@
 var palApp = angular.module('pal', []);
 
-palApp.controller('PalController',
+palApp.controller('HashTagController',
         [ '$scope', function($scope) {
     
     $scope.calc = function() {

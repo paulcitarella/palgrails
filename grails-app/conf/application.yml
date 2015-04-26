@@ -2,7 +2,7 @@
 grails:
     profile: web
     codegen:
-        defaultPackage: palgrails
+        defaultPackage: com.palgrails
 info:
     app:
         name: '@info.app.name@'
