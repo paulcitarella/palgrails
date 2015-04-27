@@ -1,9 +1,17 @@
 package com.palgrails
 
+import grails.converters.*
+
 class HashTagController {
 
-    def index() {
-        
+    def twitterService
+
+    def index(String handle) {
+        def tags = twitterService.getHashTags(handle)
+        def counts = []
+        tags.each { counts << [tag:it, count:getPalCount(it)] }
+
+        render counts as JSON
     }
 
     long getPalCount(str) {

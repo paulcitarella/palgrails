@@ -9,27 +9,32 @@ import spock.lang.Specification
 @TestFor(HashTagController)
 class HashTagControllerSpec extends Specification {
 
-    def setup() { }
+    def twitterServiceMock = Mock(TwitterService)
+
+    def setup() {
+        controller.twitterService = twitterServiceMock
+    }
 
     def cleanup() { }
 
     void "Index returns a list of hashtags for a given Twitter handle"() {
-        expect: "a list"
-            controller.getPalCount(str) == count
+        given: "a Twitter response is setup"
+            twitterServiceMock.getHashTags(_) >> ['HashTag', 'AnotherHashTag', 'YetAnotherHashTag']
 
-        where:
-            str                                             | count
-            null                                            | 0
-            ''                                              | 0
-            '#*&$#^'                                        | 0
-            'a'                                             | 1
-            '#asdf'                                         | 16
-            'asdf'                                          | 16
-            'tag with spaces'                               | 10000000
-            'tagwithspaces'                                 | 10000000
-            'tag_with_spaces'                               | 214358881
-            'LongerTagWithMixedCase'                        | 17592186044416
-            'LongerTagWithMixedCaseLongerTagWithMixedCase'  | 9223372036854775807
+        when: "index is requested"
+            controller.index("SomeHandle")
+
+        then: "a JSON response is returned"
+            controller.response.json.size() == 3
+            def tag1 = controller.response.json[0]
+            tag1.tag == 'HashTag'
+            tag1.count == 625
+            def tag2 = controller.response.json[1]
+            tag2.tag == 'AnotherHashTag'
+            tag2.count == 4782969
+            def tag3 = controller.response.json[2]
+            tag3.tag == 'YetAnotherHashTag'
+            tag3.count == 1000000000
     }
 
     void "Palindrom counts"() {
