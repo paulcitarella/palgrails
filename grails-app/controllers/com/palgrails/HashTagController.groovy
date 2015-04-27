@@ -10,6 +10,7 @@ class HashTagController {
         def tags = twitterService.getHashTags(handle)
         def counts = []
         tags.each { counts << [tag:it, count:getPalCount(it)] }
+        counts.sort { a, b -> b.count <=> a.count }
 
         render counts as JSON
     }

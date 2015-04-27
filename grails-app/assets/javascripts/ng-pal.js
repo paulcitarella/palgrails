@@ -1,9 +1,9 @@
-var palApp = angular.module('pal', []);
+var palApp = angular.module('pal', ['ngSanitize']);
 
 palApp.controller('HashTagController',
         [ '$scope', '$http', function($scope, $http) {
 
-    $scope.handle = 'HubSpot';
+    $scope.handle = 'Twitter';
     
     $scope.calc = function() {
         $scope.hashtags = null;

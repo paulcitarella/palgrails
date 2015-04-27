@@ -14,8 +14,8 @@
         </form>
 
         <div class="tag-list">
-            <ul>
-                <li ng-repeat="item in hashtags">{{item.tag}}, {{item.count}}</li>
+            <ul class="list-unstyled">
+                <li ng-repeat="item in hashtags"><span class="col-sm-5 col-sm-offset-1 hashtag"><span class="hash">#</span>{{item.tag}}</span><span ng-bind-html="item.count > 999999999 ? item.count.toExponential(2).replace('e+', ' x 10<sup>') + '</sup>' : item.count.toLocaleString()" class="col-sm-5 pal-count"></span></li>
             </ul>
         </div>
     </div>

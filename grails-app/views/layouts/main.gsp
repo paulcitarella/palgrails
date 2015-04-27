@@ -29,15 +29,13 @@
 
 <body>
     <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
-                <div class="inner cover">
-                    <g:layoutBody/>
-                </div>
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p>&copy; 2015 Your Name Here.</p>
-                    </div>
+        <div class="cover-container">
+            <div class="inner cover">
+                <g:layoutBody/>
+            </div>
+            <div class="mastfoot">
+                <div class="inner">
+                    <p>&copy; 2015 Your Name Here.</p>
                 </div>
             </div>
         </div>
