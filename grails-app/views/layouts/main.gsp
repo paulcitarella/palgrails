@@ -31,26 +31,12 @@
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
             <div class="cover-container">
-                %{-- 
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">Hashtag Palindrome Calculator</h3>
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <li class="active"><a href="#">Home</a></li>
-                                <li><a href="#">Features</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                 --}%
                 <div class="inner cover">
                     <g:layoutBody/>
                 </div>
                 <div class="mastfoot">
                     <div class="inner">
-                        <p>&copy; 2015 Paul Citarella.</p>
+                        <p>&copy; 2015 Your Name Here.</p>
                     </div>
                 </div>
             </div>

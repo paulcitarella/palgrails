@@ -37,7 +37,7 @@ class HashTagControllerSpec extends Specification {
             tag3.count == 1000000000
     }
 
-    void "Palindrom counts"() {
+    void "Palindrome counts"() {
         expect: "correct palindrom counts are returned"
             controller.getPalCount(str) == count
 

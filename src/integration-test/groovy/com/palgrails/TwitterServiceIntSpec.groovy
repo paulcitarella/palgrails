@@ -7,7 +7,7 @@ import spock.lang.*
 
 @Integration
 @Rollback
-class TwitterServiceSpec extends Specification {
+class TwitterServiceIntSpec extends Specification {
 
     @Autowired
     TwitterService twitterService
@@ -19,7 +19,7 @@ class TwitterServiceSpec extends Specification {
     }
 
     void "Get twitter hashtags"() {
-        expect: "an empty list is returned"
-            twitterService.getHashTags("asdf") == []
+        expect: "a list is hashtags is returned"
+            twitterService.getHashTags("HubSpot").size() > 1
     }
 }
